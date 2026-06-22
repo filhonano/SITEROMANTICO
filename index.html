@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriano Ama MUITO a Clara</title>
+    <link rel="stylesheet" href="includes/css/index.css">
+</head>
+<body>
+
+    <audio id="meu-audio" src="tevivo.mp3" loop></audio>
+
+    <div id="tela-inicial" class="card">
+        <h1>Adriano Ama MUITO a Clara</h1>
+        <p>EU TE VIVO ❤️</p>
+        <img src="includes/img/exemplo.jpeg" alt="Nossa foto principal" width="300" class="foto-principal">
+        <br>
+        <button onclick="mostrarSurpresa()">Clique aqui</button>
+    </div>
+
+    <div id="surpresa">
+        <button class="btn-voltar" onclick="voltarParaInicio()" style="float: none; margin-bottom: 20px;">⬅ Voltar para o Início</button>
+        
+        <h2 id="titulo-menu">Escolha uma carta, meu amor: 🥰</h2>
+        
+        <div class="menu-cartas" style="flex-wrap: wrap; justify-content: center;">
+            <div class="carta-item" onclick="abrirSecao('carta-amor')">
+                <div class="envelope-icone">✉️</div>
+                <h3>Leia 1% do meu amor por você</h3>
+            </div>
+
+            <div class="carta-item" onclick="abrirSecao('carta-momentos')">
+                <div class="envelope-icone">📸</div>
+                <h3>Meus momentos favoritos com você</h3>
+            </div>
+
+            <div class="carta-item" onclick="abrirSecao('carta-jogo')">
+                <div class="envelope-icone">🎮</div>
+                <h3>Um desafio rápido</h3>
+            </div>
+
+            <div class="carta-item" onclick="abrirSecao('carta-supernet'); iniciarJogoSuperNet();">
+                <div class="envelope-icone">🕹️</div>
+                <h3>Joguinho do Supernatural</h3>
+            </div>
+        </div>
+
+        <div id="carta-amor" class="conteudo-secao card">
+            <button class="btn-voltar" onclick="fecharSecao('carta-amor')">⬅ Voltar</button>
+            <h1>Meu Amor por Você ❤️</h1>
+            <div class="texto-carta">
+                <p>Amor da minha vida, eu te amo alem do infinito, esse site que eu fiz é só um poquinho do meu amor por você, comecei a fazer ele hoje, dia 22/5/2026, resolvi refazer aquele primeiro site lembra?</p>
+                <p>Obrigado por ser essa garota incrível (e insuportável). E como eu jurei sempre dar o meu melhor por você, refiz o site muito melhor agora, eu te amo infinitamente minha pequena ❤️. Eu te vivo hoje, amanhã e sempre!</p>
+            </div>
+        </div>
+
+        <div id="carta-momentos" class="conteudo-secao card" style="max-width: 850px;">
+            <button class="btn-voltar" onclick="fecharSecao('carta-momentos')">⬅ Voltar</button>
+            <h1>Nossos Momentos ✨</h1>
+            <div class="galeria-polaroid">
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Primeiro encontro com a Bea e o Shorts 📅 11/11/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Primeira viagem com Você ❤️ 📅 27/12/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Niver da Carol, me falou te amo na hora de ir embora 📅 07/06/2025  </div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Sua primeira entrevista de emprego 📅 18/11/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Primeira vez andando de carroça com Você 📅 11/01/2026</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Primeira vez que te levei no ponto, e te dei uma flor 📅 14/03/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Nosso primeiro Arraial juntos 📅 14/06/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Sua Primeira vez comendo Just Burguer 📅 4/04/2026</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Cafajestes 📅 7/11/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Nossa Primeira vez na Academia juntos 📅 26/12/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Dia do nosso primeiro beijo 📅 25/05/2025</div></div>
+                <div class="polaroid"><img src="includes/img/exemplo.jpeg"><div class="legenda">Aqui a gente jurava que nao queria se pegar 📅 14/02/2025</div></div>
+            </div>
+        </div>
+
+        <div id="carta-jogo" class="conteudo-secao card">
+            <button class="btn-voltar" onclick="fecharSecao('carta-jogo')">⬅ Voltar</button>
+            <h1>Pense muito bem antes da resposta hein 🤨</h1>
+            <p style="font-size: 22px; margin-bottom: 30px;">Você vai se separar de mim?</p>
+            <div class="container-botoes-jogo">
+                <button class="btn-nunca" onclick="respostaNunca()">Nunca!</button>
+                <button id="btn-sim" onmouseover="fugaBotao(this)" ontouchstart="fugaBotao(this); event.preventDefault();" onclick="fugaBotao(this)">Sim</button>
+            </div>
+        </div>
+
+        <div id="carta-supernet" class="conteudo-secao card theme-supernatural">
+            <button class="btn-voltar" onclick="fecharSecao('carta-supernet'); pararJogoSuperNet();">⬅ Voltar</button>
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/16395846974682610131" class="mini-icon-spn" alt="Proteção">
+            <h1>Supernatural 🕹️</h1>
+            <p class="spn-subtitle">SALVA O IMPALA E O DEAN AMOR! Pule os demônios com o Dean.</p>
+            <div class="game-wrapper-spn">
+                <canvas id="gameCanvas" width="550" height="250"></canvas>
+            </div>
+            <div id="tela-gameover" style="display: none; margin-top: 15px;">
+                <h3 class="spn-dead">AMOR, VOCÊ DEIXOU O DEAN MORRER  💀</h3>
+                <button onclick="reiniciarJogoSuperNet()" class="btn-spn-retry">Tentar Novamente</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="includes/js/index.js"></script>
+    <script src="includes/js/jogo.js"></script>
+</body>
+</html>
